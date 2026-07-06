@@ -17,16 +17,16 @@
 </head>
 <body class="bg-[#fcf9f5] text-stone-800 font-sans-wedding pb-28">
 
-    <!-- Hero Section with Background Image (Aesthetic from image_c24a7f.png) -->
+    <!-- Hero Section with Fixed Background Image Link -->
     <header 
-        class="relative px-6 pt-20 pb-24 text-center bg-cover bg-center overflow-hidden"
-        style="background-image: url('https://docs.google.com/uc?export=download&id=1tpGKUh0rEPp4HXBjdh6N4yCPwQ6SdRyr');"
+        class="relative px-6 min-h-[580px] flex flex-col justify-center text-center bg-cover bg-center overflow-hidden"
+        style="background-image: url('https://lh3.googleusercontent.com/d/1tpGKUh0rEPp4HXBjdh6N4yCPwQ6SdRyr');"
     >
-        <!-- Dark gradient vignette fading into the cream background, matching image_c24a5f.jpg -->
+        <!-- Dark gradient vignette fading out into the cream page background exactly like image_c24a7f.png -->
         <div class="absolute inset-0 bg-gradient-to-b from-black/85 via-black/60 to-[#fcf9f5]"></div>
         
         <!-- Hero Content -->
-        <div class="relative z-10 text-white">
+        <div class="relative z-10 text-white mt-8">
             <p class="text-xs uppercase tracking-[0.25em] text-[#cda45e] font-medium mb-4">
                 You Are Warmly Invited
             </p>
@@ -35,8 +35,8 @@
                 <span class="block text-3xl md:text-4xl italic text-[#e8d8be] mt-1">& Olarotimi</span>
             </h1>
             
-            <!-- Diamond Divider Signature Element from image_c24a7f.png -->
-            <div class="flex items-center justify-center my-6 opacity-80">
+            <!-- Diamond Divider Signature Element -->
+            <div class="flex items-center justify-center my-5 opacity-80">
                 <div class="w-16 h-[0.5px] bg-[#cda45e]/40"></div>
                 <div class="text-[#cda45e] mx-2 text-[8px]">♦</div>
                 <div class="w-16 h-[0.5px] bg-[#cda45e]/40"></div>
@@ -46,9 +46,32 @@
                 <span class="block">Traditional Marriage — 1st October, 2026</span>
                 <span class="block">White Wedding — 3rd October, 2026</span>
             </p>
-            <p class="text-base font-serif-wedding italic text-[#cda45e] tracking-wide mt-3">
+            <p class="text-base font-serif-wedding italic text-[#cda45e] tracking-wide mt-3 mb-8">
                 Warri, Delta State
             </p>
+
+            <!-- Fancy Countdown Timer Widget -->
+            <div class="max-w-xs mx-auto bg-black/20 backdrop-blur-md border border-[#cda45e]/20 p-4 rounded-lg shadow-2xl">
+                <p class="text-[9px] uppercase tracking-[0.2em] text-[#e8d8be] mb-2.5 font-medium">Countdown to Celebration</p>
+                <div class="grid grid-cols-4 gap-2 text-center">
+                    <div class="border-r border-[#cda45e]/20 last:border-none pr-1">
+                        <span id="countdown-days" class="block text-2xl font-serif-wedding text-white font-light">00</span>
+                        <span class="text-[8px] uppercase tracking-widest text-stone-400">Days</span>
+                    </div>
+                    <div class="border-r border-[#cda45e]/20 last:border-none pr-1">
+                        <span id="countdown-hours" class="block text-2xl font-serif-wedding text-white font-light">00</span>
+                        <span class="text-[8px] uppercase tracking-widest text-stone-400">Hrs</span>
+                    </div>
+                    <div class="border-r border-[#cda45e]/20 last:border-none pr-1">
+                        <span id="countdown-minutes" class="block text-2xl font-serif-wedding text-white font-light">00</span>
+                        <span class="text-[8px] uppercase tracking-widest text-stone-400">Min</span>
+                    </div>
+                    <div>
+                        <span id="countdown-seconds" class="block text-2xl font-serif-wedding text-[#e8d8be] font-medium animate-pulse">00</span>
+                        <span class="text-[8px] uppercase tracking-widest text-stone-400">Sec</span>
+                    </div>
+                </div>
+            </div>
         </div>
     </header>
 
@@ -145,7 +168,7 @@
         </section>
     </main>
 
-    <!-- Dual Fixed RSVP Action Bar inspired by the flat gold typography button in image_c24a7f.png -->
+    <!-- Dual Fixed RSVP Action Bar -->
     <div class="fixed bottom-0 left-0 right-0 bg-[#fcf9f5]/95 backdrop-blur-md border-t border-stone-200/60 p-4 shadow-xl z-50">
         <div class="max-w-md mx-auto grid grid-cols-2 gap-3">
             <a 
@@ -166,6 +189,41 @@
             </a>
         </div>
     </div>
+
+    <!-- Countdown Logic Engine -->
+    <script>
+        // Set the Target Wedding Date (Traditional Marriage opening event: Oct 1, 2026)
+        const targetDate = new Date("Oct 1, 2026 00:00:00").getTime();
+
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const difference = targetDate - now;
+
+            if (difference <= 0) {
+                document.getElementById("countdown-days").innerText = "00";
+                document.getElementById("countdown-hours").innerText = "00";
+                document.getElementById("countdown-minutes").innerText = "00";
+                document.getElementById("countdown-seconds").innerText = "00";
+                return;
+            }
+
+            // Time math conversions
+            const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+            // Pad numbers with leading zeros for luxury aesthetic symmetry
+            document.getElementById("countdown-days").innerText = days < 10 ? "0" + days : days;
+            document.getElementById("countdown-hours").innerText = hours < 10 ? "0" + hours : hours;
+            document.getElementById("countdown-minutes").innerText = minutes < 10 ? "0" + minutes : minutes;
+            document.getElementById("countdown-seconds").innerText = seconds < 10 ? "0" + seconds : seconds;
+        }
+
+        // Run immediately and setup runtime interval loop
+        updateCountdown();
+        setInterval(updateCountdown, 1000);
+    </script>
 
 </body>
 </html>
