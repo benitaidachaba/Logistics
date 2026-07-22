@@ -24,267 +24,273 @@
 </head>
 <body class="bg-[#fcf9f5] text-stone-800 font-sans-wedding pb-28">
 
-    <!-- Hero Section with Fixed Background Image Link -->
+    <!-- Compact Hero Section with Top-Right Countdown & Higher Gradient Blend -->
     <header 
-        class="relative px-6 min-h-[580px] flex flex-col justify-center text-center bg-cover bg-center overflow-hidden"
+        class="relative px-6 py-10 min-h-[380px] flex flex-col justify-center text-center bg-cover bg-center overflow-hidden"
         style="background-image: url('https://lh3.googleusercontent.com/d/1tpGKUh0rEPp4HXBjdh6N4yCPwQ6SdRyr');"
     >
-        <!-- Dark gradient vignette fading out into the cream page background -->
-        <div class="absolute inset-0 bg-gradient-to-b from-black/85 via-black/60 to-[#fcf9f5]"></div>
+        <!-- Dark gradient vignette starting higher for seamless blending -->
+        <div class="absolute inset-0 bg-gradient-to-b from-black/90 via-black/65 via-45% to-[#fcf9f5]"></div>
         
-        <!-- Hero Content -->
-        <div class="relative z-10 text-white mt-8">
-            <p class="text-[10px] md:text-xs uppercase tracking-[0.25em] text-[#cda45e] font-medium mb-4">
-                You Are Warmly Invited
-            </p>
-            <h1 class="text-4xl md:text-5xl font-serif-wedding font-light tracking-wide mb-1 text-white">
-                Evuesiri 
-                <span class="block text-3xl md:text-4xl italic text-[#e8d8be] mt-1">& Olarotimi</span>
-            </h1>
-            
-            <p class="text-lg md:text-xl font-serif-wedding font-medium text-white tracking-widest mt-4">
-                #loveER
-            </p>
-
-            <!-- Diamond Divider Signature Element -->
-            <div class="flex items-center justify-center my-4 opacity-80">
-                <div class="w-16 h-[0.5px] bg-[#cda45e]/40"></div>
-                <div class="text-[#cda45e] mx-2 text-[8px]">♦</div>
-                <div class="w-16 h-[0.5px] bg-[#cda45e]/40"></div>
-            </div>
-
-            <p class="text-[11px] font-medium tracking-[0.18em] uppercase text-gray-300 space-y-1 mb-2">
-                <span class="block">Traditional Marriage — 1st October, 2026</span>
-                <span class="block">White Wedding — 3rd October, 2026</span>
-            </p>
-            
-            <p class="text-xs uppercase tracking-widest text-[#a9bca5] font-medium mt-3 mb-2">
-                Colours: Olive Green & Emerald Green
-            </p>
-
-            <p class="text-base font-serif-wedding italic text-[#cda45e] tracking-wide mb-8">
-                Warri, Delta State
-            </p>
-
-            <!-- Fancy Countdown Timer Widget -->
-            <div class="max-w-xs mx-auto bg-black/20 backdrop-blur-md border border-[#cda45e]/20 p-4 rounded-lg shadow-2xl">
-                <p class="text-[9px] uppercase tracking-[0.2em] text-[#e8d8be] mb-2.5 font-medium">Countdown to Celebration</p>
-                <div class="grid grid-cols-4 gap-2 text-center">
-                    <div class="border-r border-[#cda45e]/20 last:border-none pr-1">
-                        <span id="countdown-days" class="block text-2xl font-serif-wedding text-white font-light">00</span>
-                        <span class="text-[8px] uppercase tracking-widest text-stone-400">Days</span>
-                    </div>
-                    <div class="border-r border-[#cda45e]/20 last:border-none pr-1">
-                        <span id="countdown-hours" class="block text-2xl font-serif-wedding text-white font-light">00</span>
-                        <span class="text-[8px] uppercase tracking-widest text-stone-400">Hrs</span>
-                    </div>
-                    <div class="border-r border-[#cda45e]/20 last:border-none pr-1">
-                        <span id="countdown-minutes" class="block text-2xl font-serif-wedding text-white font-light">00</span>
-                        <span class="text-[8px] uppercase tracking-widest text-stone-400">Min</span>
-                    </div>
-                    <div>
-                        <span id="countdown-seconds" class="block text-2xl font-serif-wedding text-[#e8d8be] font-medium animate-pulse">00</span>
-                        <span class="text-[8px] uppercase tracking-widest text-stone-400">Sec</span>
-                    </div>
+        <!-- Countdown Timer Widget (Top-Right on Desktop, Stacked on Mobile) -->
+        <div class="relative md:absolute md:top-6 md:right-6 z-20 max-w-[260px] mx-auto md:mx-0 bg-black/45 backdrop-blur-md border border-[#cda45e]/30 p-3 rounded-lg shadow-2xl mb-4 md:mb-0">
+            <p class="text-[9px] uppercase tracking-[0.2em] text-[#e8d8be] mb-1.5 font-medium text-center">Countdown to Celebration</p>
+            <div class="grid grid-cols-4 gap-1.5 text-center">
+                <div class="border-r border-[#cda45e]/20 pr-1">
+                    <span id="countdown-days" class="block text-xl font-serif-wedding text-white font-light">00</span>
+                    <span class="text-[7px] uppercase tracking-widest text-stone-300">Days</span>
+                </div>
+                <div class="border-r border-[#cda45e]/20 pr-1">
+                    <span id="countdown-hours" class="block text-xl font-serif-wedding text-white font-light">00</span>
+                    <span class="text-[7px] uppercase tracking-widest text-stone-300">Hrs</span>
+                </div>
+                <div class="border-r border-[#cda45e]/20 pr-1">
+                    <span id="countdown-minutes" class="block text-xl font-serif-wedding text-white font-light">00</span>
+                    <span class="text-[7px] uppercase tracking-widest text-stone-300">Min</span>
+                </div>
+                <div>
+                    <span id="countdown-seconds" class="block text-xl font-serif-wedding text-[#e8d8be] font-medium animate-pulse">00</span>
+                    <span class="text-[7px] uppercase tracking-widest text-stone-300">Sec</span>
                 </div>
             </div>
         </div>
+
+        <!-- Hero Content -->
+        <div class="relative z-10 text-white my-auto">
+            <p class="text-[10px] md:text-xs uppercase tracking-[0.25em] text-[#cda45e] font-medium mb-1.5">
+                You Are Warmly Invited
+            </p>
+            <h1 class="text-3xl md:text-4xl font-serif-wedding font-light tracking-wide text-white">
+                Evuesiri 
+                <span class="inline-block md:block text-2xl md:text-3xl italic text-[#e8d8be] md:mt-0.5">& Olarotimi</span>
+            </h1>
+            
+            <p class="text-base font-serif-wedding font-medium text-white tracking-widest mt-1.5">
+                #loveER
+            </p>
+
+            <!-- Diamond Divider -->
+            <div class="flex items-center justify-center my-2.5 opacity-80">
+                <div class="w-12 h-[0.5px] bg-[#cda45e]/40"></div>
+                <div class="text-[#cda45e] mx-2 text-[8px]">♦</div>
+                <div class="w-12 h-[0.5px] bg-[#cda45e]/40"></div>
+            </div>
+
+            <p class="text-[10px] font-medium tracking-[0.18em] uppercase text-gray-300 mb-1">
+                Traditional: 1st Oct, 2026 &bull; White Wedding: 3rd Oct, 2026
+            </p>
+            
+            <p class="text-[10px] uppercase tracking-widest text-[#a9bca5] font-medium mb-1">
+                Colours: Olive Green & Emerald Green
+            </p>
+
+            <p class="text-xs font-serif-wedding italic text-[#cda45e] tracking-wide">
+                Warri, Delta State
+            </p>
+        </div>
     </header>
 
-    <main class="max-w-7xl mx-auto px-6 py-10 space-y-10">
+    <main class="max-w-7xl mx-auto px-6 py-8 space-y-10">
         
-        <!-- Important Notice -->
-        <section class="max-w-2xl mx-auto bg-[#f5ebd7]/30 border-l-2 border-[#cda45e] p-5 rounded-r shadow-sm">
-            <h2 class="text-xs uppercase tracking-[0.2em] text-[#af8b4b] font-semibold mb-2">Important Notice</h2>
-            <p class="text-xs text-stone-700 leading-relaxed mb-3 font-light">
+        <!-- Important Notice Callout -->
+        <section class="max-w-2xl mx-auto bg-[#f5ebd7]/30 border-l-2 border-[#cda45e] p-4 rounded-r shadow-sm">
+            <h2 class="text-xs uppercase tracking-[0.2em] text-[#af8b4b] font-semibold mb-1">Important Notice</h2>
+            <p class="text-xs text-stone-700 leading-relaxed mb-2 font-light">
                 As this is an out-of-state destination wedding, your timely response greatly assists us in ensuring all our guests are well taken care of.
             </p>
-            <div class="flex flex-wrap gap-2 mt-4">
-                <span class="inline-flex items-center text-[10px] uppercase tracking-wider font-medium text-stone-700 bg-white/80 border border-stone-200/60 px-3 py-1.5 shadow-sm">
+            <div class="flex flex-wrap gap-2 mt-3">
+                <span class="inline-flex items-center text-[10px] uppercase tracking-wider font-medium text-stone-700 bg-white/80 border border-stone-200/60 px-3 py-1 shadow-sm">
                     <span class="w-1.5 h-1.5 rounded-full bg-[#cda45e] mr-2"></span> Strictly By Invitation
                 </span>
-                <span class="inline-flex items-center text-[10px] uppercase tracking-wider font-medium text-stone-700 bg-white/80 border border-stone-200/60 px-3 py-1.5 shadow-sm">
+                <span class="inline-flex items-center text-[10px] uppercase tracking-wider font-medium text-stone-700 bg-white/80 border border-stone-200/60 px-3 py-1 shadow-sm">
                     <span class="w-1.5 h-1.5 rounded-full bg-[#cda45e] mr-2"></span> No Children Allowed
                 </span>
             </div>
         </section>
 
-        <!-- 3-Column Logistics Layout -->
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
+        <!-- ROW 1: 3-Column Layout (Schedule, Venues, Airport Overview) -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
             
-            <!-- Column 1: The Schedule -->
-            <section>
-                <div class="mb-6">
+            <!-- Col 1: Schedule -->
+            <section class="bg-white p-5 shadow-sm border border-stone-100 flex flex-col justify-between">
+                <div>
                     <p class="text-[10px] uppercase tracking-[0.25em] text-stone-400 font-semibold">Events</p>
-                    <h2 class="text-2xl font-serif-wedding font-medium text-stone-800 border-b border-stone-200/60 pb-2 mt-1">The Schedule</h2>
-                </div>
-                <div class="space-y-4">
-                    <div class="bg-white p-5 shadow-sm border border-stone-100 relative overflow-hidden">
-                        <div class="absolute left-0 top-0 bottom-0 w-[3px] bg-[#cda45e]"></div>
-                        <h3 class="font-serif-wedding font-semibold text-stone-900 text-xl tracking-wide">Traditional Marriage</h3>
-                        <p class="text-[#af8b4b] text-xs uppercase tracking-wider font-medium mt-1">Thursday, 1st October 2026</p>
-                    </div>
-                    <div class="bg-white p-5 shadow-sm border border-stone-100 relative overflow-hidden">
-                        <div class="absolute left-0 top-0 bottom-0 w-[3px] bg-stone-800"></div>
-                        <h3 class="font-serif-wedding font-semibold text-stone-900 text-xl tracking-wide">White Wedding</h3>
-                        <p class="text-stone-500 text-xs uppercase tracking-wider font-medium mt-1">Saturday, 3rd October 2026</p>
+                    <h2 class="text-xl font-serif-wedding font-medium text-stone-800 border-b border-stone-200/60 pb-2 mt-0.5 mb-4">The Schedule</h2>
+                    
+                    <div class="space-y-4">
+                        <div class="relative pl-3 border-l-2 border-[#cda45e]">
+                            <h3 class="font-serif-wedding font-semibold text-stone-900 text-lg">Traditional Marriage</h3>
+                            <p class="text-[#af8b4b] text-xs uppercase tracking-wider font-medium mt-0.5">Thursday, 1st October 2026</p>
+                        </div>
                         
-                        <div class="mt-4 pt-4 border-t border-stone-100 space-y-3">
-                            <div>
-                                <p class="text-[10px] uppercase tracking-widest text-stone-400 font-medium">Ceremony</p>
-                                <p class="text-sm font-serif-wedding text-stone-800 mt-0.5">12:00 Noon</p>
-                            </div>
-                            <div>
-                                <p class="text-[10px] uppercase tracking-widest text-stone-400 font-medium">Reception</p>
-                                <p class="text-sm font-serif-wedding text-stone-800 mt-0.5">2:00 PM</p>
+                        <div class="relative pl-3 border-l-2 border-stone-800">
+                            <h3 class="font-serif-wedding font-semibold text-stone-900 text-lg">White Wedding</h3>
+                            <p class="text-stone-500 text-xs uppercase tracking-wider font-medium mt-0.5">Saturday, 3rd October 2026</p>
+                            <div class="mt-2 text-xs text-stone-600 space-y-1">
+                                <p><span class="font-medium text-stone-800">Ceremony:</span> 12:00 Noon</p>
+                                <p><span class="font-medium text-stone-800">Reception:</span> 2:00 PM</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <!-- Column 2: Venues & Hotels -->
-            <section>
-                <div class="mb-6">
+            <!-- Col 2: Venues -->
+            <section class="bg-white p-5 shadow-sm border border-stone-100 flex flex-col justify-between">
+                <div>
                     <p class="text-[10px] uppercase tracking-[0.25em] text-stone-400 font-semibold">Locations</p>
-                    <h2 class="text-2xl font-serif-wedding font-medium text-stone-800 border-b border-stone-200/60 pb-2 mt-1">Venues & Hotels</h2>
-                </div>
-                <div class="space-y-6">
-                    <!-- Ceremony Venue -->
-                    <div class="bg-white p-5 shadow-sm border border-stone-100">
-                        <h3 class="text-[11px] font-semibold text-stone-400 uppercase tracking-[0.2em] mb-2 flex items-center">
-                            <svg class="w-3 h-3 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
-                            Ceremony Venue
-                        </h3>
-                        <p class="font-serif-wedding font-semibold text-stone-800 text-lg">Family Worship Center</p>
-                        <p class="text-xs text-stone-600 mt-1 leading-relaxed">
-                            No. 23 Deco Road (on the 2nd floor, just before Robinson Plaza),<br>Warri, Delta State
-                        </p>
-                    </div>
+                    <h2 class="text-xl font-serif-wedding font-medium text-stone-800 border-b border-stone-200/60 pb-2 mt-0.5 mb-4">Event Venues</h2>
+                    
+                    <div class="space-y-4">
+                        <div>
+                            <h3 class="text-[11px] font-semibold text-[#af8b4b] uppercase tracking-[0.15em] mb-1 flex items-center">
+                                <svg class="w-3 h-3 mr-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path></svg>
+                                Ceremony Venue
+                            </h3>
+                            <p class="font-serif-wedding font-semibold text-stone-800 text-base">Family Worship Center</p>
+                            <p class="text-xs text-stone-600 mt-0.5 leading-relaxed">
+                                No. 23 Deco Road (2nd floor, before Robinson Plaza), Warri, Delta State
+                            </p>
+                        </div>
 
-                    <!-- Reception Venue -->
-                    <div class="bg-white p-5 shadow-sm border border-stone-100">
-                        <h3 class="text-[11px] font-semibold text-stone-400 uppercase tracking-[0.2em] mb-2 flex items-center">
-                            <svg class="w-3 h-3 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
-                            Reception Venue
-                        </h3>
-                        <p class="font-serif-wedding font-semibold text-stone-800 text-lg">Cedar Event Centre</p>
-                        <p class="text-xs text-stone-600 mt-1 leading-relaxed">
-                            41 Airport Road, Adjacent Edjeba Junction,<br>Warri, Delta State
-                        </p>
-                    </div>
-
-                    <!-- Recommended Hotels List -->
-                    <div class="bg-white p-5 shadow-sm border border-stone-100">
-                        <h3 class="text-[11px] font-semibold text-stone-400 uppercase tracking-[0.2em] mb-3">Recommended Hotels (Warri)</h3>
-                        <p class="text-[11px] text-stone-500 mb-3 font-light">Click any hotel below to view details and book your stay:</p>
-                        <ul class="space-y-2.5 text-xs">
-                            <li>
-                                <a href="https://www.google.com/travel/search?q=BON+Hotel+Hyatti,+Warri" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between p-2 bg-stone-50 hover:bg-[#f5ebd7]/40 border border-stone-100 transition duration-200 group">
-                                    <span class="font-medium text-stone-800 group-hover:text-[#af8b4b]">BON Hotel Hyatti</span>
-                                    <span class="text-[10px] text-[#af8b4b] uppercase tracking-wider font-medium">Book &rarr;</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://www.google.com/travel/search?q=Lascurt+Hotel" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between p-2 bg-stone-50 hover:bg-[#f5ebd7]/40 border border-stone-100 transition duration-200 group">
-                                    <span class="font-medium text-stone-800 group-hover:text-[#af8b4b]">Lascurt Hotel</span>
-                                    <span class="text-[10px] text-[#af8b4b] uppercase tracking-wider font-medium">Book &rarr;</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://www.google.com/travel/search?q=Sonamoni+Hotel+Effurun" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between p-2 bg-stone-50 hover:bg-[#f5ebd7]/40 border border-stone-100 transition duration-200 group">
-                                    <span class="font-medium text-stone-800 group-hover:text-[#af8b4b]">Sonamoni Hotel</span>
-                                    <span class="text-[10px] text-[#af8b4b] uppercase tracking-wider font-medium">Book &rarr;</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://www.google.com/travel/search?q=Ivy+Lush+Hotel" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between p-2 bg-stone-50 hover:bg-[#f5ebd7]/40 border border-stone-100 transition duration-200 group">
-                                    <span class="font-medium text-stone-800 group-hover:text-[#af8b4b]">Ivylush Hotel</span>
-                                    <span class="text-[10px] text-[#af8b4b] uppercase tracking-wider font-medium">Book &rarr;</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://www.google.com/travel/search?q=Pretelia+Hotel+Warri" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between p-2 bg-stone-50 hover:bg-[#f5ebd7]/40 border border-stone-100 transition duration-200 group">
-                                    <span class="font-medium text-stone-800 group-hover:text-[#af8b4b]">Pretelia Hotel</span>
-                                    <span class="text-[10px] text-[#af8b4b] uppercase tracking-wider font-medium">Book &rarr;</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://www.google.com/travel/search?q=Protea+Hotel+Delta" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between p-2 bg-stone-50 hover:bg-[#f5ebd7]/40 border border-stone-100 transition duration-200 group">
-                                    <span class="font-medium text-stone-800 group-hover:text-[#af8b4b]">Protea Hotel Delta</span>
-                                    <span class="text-[10px] text-[#af8b4b] uppercase tracking-wider font-medium">Book &rarr;</span>
-                                </a>
-                            </li>
-                        </ul>
+                        <div class="pt-3 border-t border-stone-100">
+                            <h3 class="text-[11px] font-semibold text-[#af8b4b] uppercase tracking-[0.15em] mb-1 flex items-center">
+                                <svg class="w-3 h-3 mr-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path></svg>
+                                Reception Venue
+                            </h3>
+                            <p class="font-serif-wedding font-semibold text-stone-800 text-base">Cedar Event Centre</p>
+                            <p class="text-xs text-stone-600 mt-0.5 leading-relaxed">
+                                41 Airport Road, Adjacent Edjeba Junction, Warri, Delta State
+                            </p>
+                        </div>
                     </div>
                 </div>
             </section>
 
-            <!-- Column 3: Flight Logistics -->
-            <section>
-                <div class="mb-6">
-                    <p class="text-[10px] uppercase tracking-[0.25em] text-stone-400 font-semibold">Travel</p>
-                    <h2 class="text-2xl font-serif-wedding font-medium text-stone-800 border-b border-stone-200/60 pb-2 mt-1">Flights</h2>
+            <!-- Col 3: Airport & Travel Overview -->
+            <section class="bg-white p-5 shadow-sm border border-stone-100 flex flex-col justify-between">
+                <div>
+                    <p class="text-[10px] uppercase tracking-[0.25em] text-stone-400 font-semibold">Arrival</p>
+                    <h2 class="text-xl font-serif-wedding font-medium text-stone-800 border-b border-stone-200/60 pb-2 mt-0.5 mb-4">Airports Guide</h2>
+                    
+                    <div class="space-y-3.5 text-xs text-stone-600 leading-relaxed">
+                        <div class="bg-stone-50 p-3 border border-stone-100">
+                            <p class="font-medium text-stone-900 uppercase text-[10px] tracking-wider text-[#af8b4b] mb-1">Primary Airport</p>
+                            <p class="font-serif-wedding font-semibold text-stone-800 text-base">Osubi Airport (QRW)</p>
+                            <p class="text-[11px] mt-0.5">Located directly in Warri, closest to all venues and hotels.</p>
+                        </div>
+
+                        <div class="bg-stone-50 p-3 border border-stone-100">
+                            <p class="font-medium text-stone-900 uppercase text-[10px] tracking-wider text-stone-400 mb-1">Alternative Airport</p>
+                            <p class="font-serif-wedding font-semibold text-stone-800 text-base">Asaba Int'l Airport (ABB)</p>
+                            <p class="text-[11px] mt-0.5">Approx. 1.5 - 2 hours drive to Warri via taxi/shuttle.</p>
+                        </div>
+                    </div>
                 </div>
-                <p class="text-xs text-stone-600 mb-5 leading-relaxed font-light">
-                    The closest airport is <strong class="font-medium text-stone-900">Osubi Airport (QRW)</strong> in Warri. Alternatively, guests can fly into Asaba International Airport (ABB). Click any airline to book your round trips:
-                </p>
+            </section>
+
+        </div>
+
+        <!-- ROW 2: Centered 2-Column Layout (Hotels & Flight Schedule) -->
+        <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+            
+            <!-- Centered Col 1: Recommended Hotels in Warri -->
+            <section class="bg-white p-6 shadow-sm border border-stone-100">
+                <div class="mb-4">
+                    <p class="text-[10px] uppercase tracking-[0.25em] text-stone-400 font-semibold">Stay</p>
+                    <h2 class="text-2xl font-serif-wedding font-medium text-stone-800 border-b border-stone-200/60 pb-2 mt-0.5">Hotels in Warri</h2>
+                </div>
+                <p class="text-xs text-stone-500 mb-4 font-light">Click any hotel below to open direct online booking options:</p>
                 
-                <div class="space-y-6">
-                    <!-- Abuja Flights -->
+                <ul class="space-y-2 text-xs">
+                    <li>
+                        <a href="https://www.google.com/travel/search?q=BON+Hotel+Hyatti,+Warri" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between p-2.5 bg-stone-50 hover:bg-[#f5ebd7]/40 border border-stone-100 transition duration-200 group">
+                            <span class="font-medium text-stone-800 group-hover:text-[#af8b4b]">BON Hotel Hyatti</span>
+                            <span class="text-[10px] text-[#af8b4b] uppercase tracking-wider font-medium">Book &rarr;</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.google.com/travel/search?q=Lascurt+Hotel" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between p-2.5 bg-stone-50 hover:bg-[#f5ebd7]/40 border border-stone-100 transition duration-200 group">
+                            <span class="font-medium text-stone-800 group-hover:text-[#af8b4b]">Lascurt Hotel</span>
+                            <span class="text-[10px] text-[#af8b4b] uppercase tracking-wider font-medium">Book &rarr;</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.google.com/travel/search?q=Sonamoni+Hotel+Effurun" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between p-2.5 bg-stone-50 hover:bg-[#f5ebd7]/40 border border-stone-100 transition duration-200 group">
+                            <span class="font-medium text-stone-800 group-hover:text-[#af8b4b]">Sonamoni Hotel</span>
+                            <span class="text-[10px] text-[#af8b4b] uppercase tracking-wider font-medium">Book &rarr;</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.google.com/travel/search?q=Ivy+Lush+Hotel" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between p-2.5 bg-stone-50 hover:bg-[#f5ebd7]/40 border border-stone-100 transition duration-200 group">
+                            <span class="font-medium text-stone-800 group-hover:text-[#af8b4b]">Ivylush Hotel</span>
+                            <span class="text-[10px] text-[#af8b4b] uppercase tracking-wider font-medium">Book &rarr;</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.google.com/travel/search?q=Pretelia+Hotel+Warri" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between p-2.5 bg-stone-50 hover:bg-[#f5ebd7]/40 border border-stone-100 transition duration-200 group">
+                            <span class="font-medium text-stone-800 group-hover:text-[#af8b4b]">Pretelia Hotel</span>
+                            <span class="text-[10px] text-[#af8b4b] uppercase tracking-wider font-medium">Book &rarr;</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.google.com/travel/search?q=Protea+Hotel+Delta" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between p-2.5 bg-stone-50 hover:bg-[#f5ebd7]/40 border border-stone-100 transition duration-200 group">
+                            <span class="font-medium text-stone-800 group-hover:text-[#af8b4b]">Protea Hotel Delta</span>
+                            <span class="text-[10px] text-[#af8b4b] uppercase tracking-wider font-medium">Book &rarr;</span>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+
+            <!-- Centered Col 2: Flight Booking & Airlines -->
+            <section class="bg-white p-6 shadow-sm border border-stone-100">
+                <div class="mb-4">
+                    <p class="text-[10px] uppercase tracking-[0.25em] text-stone-400 font-semibold">Flights</p>
+                    <h2 class="text-2xl font-serif-wedding font-medium text-stone-800 border-b border-stone-200/60 pb-2 mt-0.5">Airlines & Schedules</h2>
+                </div>
+                <p class="text-xs text-stone-500 mb-4 font-light">Click any airline below to visit their booking portal:</p>
+                
+                <div class="space-y-5">
+                    <!-- Abuja Departures -->
                     <div>
-                        <h3 class="text-[10px] font-semibold text-stone-400 uppercase tracking-[0.2em] mb-3">Departing from Abuja (ABV)</h3>
-                        <ul class="space-y-2">
-                            <li>
-                                <a href="https://www.flyairpeace.com/" target="_blank" rel="noopener noreferrer" class="flex flex-col p-3 bg-white hover:bg-[#f5ebd7]/40 shadow-sm border border-stone-100 transition duration-200 group">
-                                    <span class="font-serif-wedding font-semibold text-stone-800 text-base group-hover:text-[#af8b4b] flex items-center justify-content">Air Peace <span class="text-xs ml-auto font-sans text-[#af8b4b]">Website &rarr;</span></span>
-                                    <span class="text-[10px] text-[#af8b4b] uppercase tracking-wider mt-0.5">Flies Every Day</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://flyunitednigeria.com/" target="_blank" rel="noopener noreferrer" class="flex flex-col p-3 bg-white hover:bg-[#f5ebd7]/40 shadow-sm border border-stone-100 transition duration-200 group">
-                                    <span class="font-serif-wedding font-semibold text-stone-800 text-base group-hover:text-[#af8b4b] flex items-center justify-content">United Nigeria <span class="text-xs ml-auto font-sans text-[#af8b4b]">Website &rarr;</span></span>
-                                    <span class="text-[10px] text-[#af8b4b] uppercase tracking-wider mt-0.5">Flies Every Day</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://www.overlandairways.com/" target="_blank" rel="noopener noreferrer" class="flex flex-col p-3 bg-white hover:bg-[#f5ebd7]/40 shadow-sm border border-stone-100 transition duration-200 group">
-                                    <span class="font-serif-wedding font-semibold text-stone-800 text-base group-hover:text-[#af8b4b] flex items-center justify-content">Overland Airways <span class="text-xs ml-auto font-sans text-[#af8b4b]">Website &rarr;</span></span>
-                                    <span class="text-[10px] text-stone-400 uppercase tracking-wider mt-0.5">Flies Tue, Thu, Sat</span>
-                                </a>
-                            </li>
-                        </ul>
+                        <h3 class="text-[10px] font-semibold text-stone-400 uppercase tracking-[0.2em] mb-2">From Abuja (ABV)</h3>
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
+                            <a href="https://www.flyairpeace.com/" target="_blank" rel="noopener noreferrer" class="p-2 bg-stone-50 hover:bg-[#f5ebd7]/40 border border-stone-100 transition duration-200 group text-center">
+                                <span class="block font-serif-wedding font-semibold text-stone-800 group-hover:text-[#af8b4b] text-sm">Air Peace</span>
+                                <span class="text-[8px] text-[#af8b4b] uppercase tracking-wider block">Daily</span>
+                            </a>
+                            <a href="https://flyunitednigeria.com/" target="_blank" rel="noopener noreferrer" class="p-2 bg-stone-50 hover:bg-[#f5ebd7]/40 border border-stone-100 transition duration-200 group text-center">
+                                <span class="block font-serif-wedding font-semibold text-stone-800 group-hover:text-[#af8b4b] text-sm">United Nig.</span>
+                                <span class="text-[8px] text-[#af8b4b] uppercase tracking-wider block">Daily</span>
+                            </a>
+                            <a href="https://www.overlandairways.com/" target="_blank" rel="noopener noreferrer" class="p-2 bg-stone-50 hover:bg-[#f5ebd7]/40 border border-stone-100 transition duration-200 group text-center">
+                                <span class="block font-serif-wedding font-semibold text-stone-800 group-hover:text-[#af8b4b] text-sm">Overland</span>
+                                <span class="text-[8px] text-stone-400 uppercase tracking-wider block">Tue, Thu, Sat</span>
+                            </a>
+                        </div>
                     </div>
 
-                    <!-- Lagos Flights -->
+                    <!-- Lagos Departures -->
                     <div>
-                        <h3 class="text-[10px] font-semibold text-stone-400 uppercase tracking-[0.2em] mb-3">Departing from Lagos (LOS)</h3>
-                        <ul class="space-y-2">
-                            <li>
-                                <a href="https://www.flyairpeace.com/" target="_blank" rel="noopener noreferrer" class="flex flex-col p-3 bg-white hover:bg-[#f5ebd7]/40 shadow-sm border border-stone-100 transition duration-200 group">
-                                    <span class="font-serif-wedding font-semibold text-stone-800 text-base group-hover:text-[#af8b4b] flex items-center justify-content">Air Peace <span class="text-xs ml-auto font-sans text-[#af8b4b]">Website &rarr;</span></span>
-                                    <span class="text-[10px] text-[#af8b4b] uppercase tracking-wider mt-0.5">Flies Every Day</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://flyunitednigeria.com/" target="_blank" rel="noopener noreferrer" class="flex flex-col p-3 bg-white hover:bg-[#f5ebd7]/40 shadow-sm border border-stone-100 transition duration-200 group">
-                                    <span class="font-serif-wedding font-semibold text-stone-800 text-base group-hover:text-[#af8b4b] flex items-center justify-content">United Nigeria <span class="text-xs ml-auto font-sans text-[#af8b4b]">Website &rarr;</span></span>
-                                    <span class="text-[10px] text-stone-400 uppercase tracking-wider mt-0.5">Mon, Tue, Wed, Thu, Sun</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://ranoair.com/" target="_blank" rel="noopener noreferrer" class="flex flex-col p-3 bg-white hover:bg-[#f5ebd7]/40 shadow-sm border border-stone-100 transition duration-200 group">
-                                    <span class="font-serif-wedding font-semibold text-stone-800 text-base group-hover:text-[#af8b4b] flex items-center justify-content">Rano Air <span class="text-xs ml-auto font-sans text-[#af8b4b]">Website &rarr;</span></span>
-                                    <span class="text-[10px] text-stone-400 uppercase tracking-wider mt-0.5">Mon, Wed, Fri, Sat</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://www.arikair.com/" target="_blank" rel="noopener noreferrer" class="flex flex-col p-3 bg-white hover:bg-[#f5ebd7]/40 shadow-sm border border-stone-100 transition duration-200 group">
-                                    <span class="font-serif-wedding font-semibold text-stone-800 text-base group-hover:text-[#af8b4b] flex items-center justify-content">Arik Air <span class="text-xs ml-auto font-sans text-[#af8b4b]">Website &rarr;</span></span>
-                                    <span class="text-[10px] text-stone-400 uppercase tracking-wider mt-0.5">Check Schedule</span>
-                                </a>
-                            </li>
-                        </ul>
+                        <h3 class="text-[10px] font-semibold text-stone-400 uppercase tracking-[0.2em] mb-2">From Lagos (LOS)</h3>
+                        <div class="grid grid-cols-2 gap-2">
+                            <a href="https://www.flyairpeace.com/" target="_blank" rel="noopener noreferrer" class="p-2 bg-stone-50 hover:bg-[#f5ebd7]/40 border border-stone-100 transition duration-200 group">
+                                <span class="font-serif-wedding font-semibold text-stone-800 group-hover:text-[#af8b4b] text-sm block">Air Peace &rarr;</span>
+                                <span class="text-[8px] text-[#af8b4b] uppercase tracking-wider block">Daily Flights</span>
+                            </a>
+                            <a href="https://flyunitednigeria.com/" target="_blank" rel="noopener noreferrer" class="p-2 bg-stone-50 hover:bg-[#f5ebd7]/40 border border-stone-100 transition duration-200 group">
+                                <span class="font-serif-wedding font-semibold text-stone-800 group-hover:text-[#af8b4b] text-sm block">United Nigeria &rarr;</span>
+                                <span class="text-[8px] text-stone-400 uppercase tracking-wider block">Mon, Tue, Wed, Thu, Sun</span>
+                            </a>
+                            <a href="https://ranoair.com/" target="_blank" rel="noopener noreferrer" class="p-2 bg-stone-50 hover:bg-[#f5ebd7]/40 border border-stone-100 transition duration-200 group">
+                                <span class="font-serif-wedding font-semibold text-stone-800 group-hover:text-[#af8b4b] text-sm block">Rano Air &rarr;</span>
+                                <span class="text-[8px] text-stone-400 uppercase tracking-wider block">Mon, Wed, Fri, Sat</span>
+                            </a>
+                            <a href="https://www.arikair.com/" target="_blank" rel="noopener noreferrer" class="p-2 bg-stone-50 hover:bg-[#f5ebd7]/40 border border-stone-100 transition duration-200 group">
+                                <span class="font-serif-wedding font-semibold text-stone-800 group-hover:text-[#af8b4b] text-sm block">Arik Air &rarr;</span>
+                                <span class="text-[8px] text-stone-400 uppercase tracking-wider block">Check Schedule</span>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -321,6 +327,7 @@
             <div class="w-10 h-0.5 bg-stone-800 mb-5"></div>
             
             <div class="space-y-5 text-sm text-stone-700 leading-relaxed font-light">
+                <p>Thank you so much for taking the time to RSVP and for choosing to celebrate our special day with us. We truly appreciate your love, support, and willingness to be part of this memorable occasion.</p>
                 <p>All roads lead to Warri to celebrate our Nuptials.</p>
                 
                 <div class="bg-stone-50 p-4 border border-stone-100">
@@ -343,6 +350,7 @@
                     <p class="font-mono text-stone-900 text-sm mb-1">Zenith Bank</p>
                     <p class="font-mono text-lg font-semibold text-stone-900 mb-1">1312337110</p>
                     <p class="font-medium">Progate Event Management</p>
+                    <p class="font-semibold text-stone-800">Kindly pay on or before 20th August, 2026.</p>
                 </div>
 
                 <p class="text-xs bg-stone-100 p-3 text-center">
@@ -365,7 +373,7 @@
             <div class="space-y-4 text-xs text-stone-700 leading-relaxed font-light">
                 <p>Thank you so much for taking the time to RSVP and for choosing to celebrate our special day with us. We truly appreciate your love, support, and willingness to be part of this memorable occasion.</p>
                 
-                <p>You are receiving this message because you indicated on your RSVP that you would like to purchase our asoebi. Below is the breakdown of the available options and their respective prices:</p>
+                <p>Below is the breakdown of the available options and their respective prices:</p>
 
                 <div class="bg-stone-50 p-4 border border-stone-100 mt-2">
                     <p class="font-medium text-stone-900 uppercase text-[11px] tracking-wider mb-2">Traditional Marriage</p>
@@ -389,7 +397,7 @@
 
                 <div class="text-center space-y-2 bg-stone-50 p-3 border border-stone-100">
                     <p class="font-medium text-[#cda45e] uppercase tracking-wider text-[10px]">Deadline</p>
-                    <p class="font-semibold text-stone-800">Kindly pay on or before 7th August, 2026.</p>
+                    <p class="font-semibold text-stone-800">Kindly pay on or before 20th August, 2026.</p>
                 </div>
 
                 <p class="text-center italic mt-2">Should you have any questions, please feel free to reach out. Thank you once again for your love and support. We can't wait to celebrate with you! 🤍</p>
@@ -403,16 +411,16 @@
         function openModal(modalId) {
             document.getElementById(modalId).classList.remove('hidden');
             document.getElementById(modalId).classList.add('modal-active');
-            document.body.style.overflow = 'hidden'; // Prevent background scrolling
+            document.body.style.overflow = 'hidden';
         }
 
         function closeModal(modalId) {
             document.getElementById(modalId).classList.add('hidden');
             document.getElementById(modalId).classList.remove('modal-active');
-            document.body.style.overflow = 'auto'; // Restore scrolling
+            document.body.style.overflow = 'auto';
         }
 
-        // Close modal when clicking outside the box
+        // Close modal when clicking outside
         document.getElementById('maleModal').addEventListener('click', function(e) {
             if (e.target === this) closeModal('maleModal');
         });
@@ -420,7 +428,7 @@
             if (e.target === this) closeModal('femaleModal');
         });
 
-        // Set the Target Wedding Date (Traditional Marriage opening event: Oct 1, 2026)
+        // Set Target Date (Traditional Marriage opening event: Oct 1, 2026)
         const targetDate = new Date("Oct 1, 2026 00:00:00").getTime();
 
         function updateCountdown() {
